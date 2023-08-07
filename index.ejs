@@ -14,8 +14,24 @@
       <option value="teacher">Teacher</option>
       <option value="student">Student</option>
     </select>
+    <div id="password-input" style="display: none;">
+      <label for="password">Password:</label>
+      <input type="password" name="password">
+    </div>
     <button type="submit">Login</button>
   </form>
+  <script>
+    const roleSelect = document.getElementById('role');
+    const passwordInput = document.getElementById('password-input');
+
+    roleSelect.addEventListener('change', function () {
+      if (roleSelect.value === 'teacher') {
+        passwordInput.style.display = 'block';
+      } else {
+        passwordInput.style.display = 'none';
+      }
+    });
+  </script>
   <% if (role === 'teacher') { %>
     <a href="/teacher">Go to Teacher Dashboard</a>
   <% } else if (role === 'student') { %>
