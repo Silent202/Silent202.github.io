@@ -12,13 +12,13 @@ app.use(session({
   saveUninitialized: true,
 }));
 
-// Store links added by the teacher
+// Sample data for links added by the teacher
 let teacherLinks = [];
 
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index', { role: req.session.role, teacherLinks });
+  res.render('index', { role: req.session.role });
 });
 
 app.get('/teacher', (req, res) => {
@@ -43,8 +43,9 @@ app.get('/student', (req, res) => {
 
 app.post('/login', (req, res) => {
   const role = req.body.role;
+  const password = req.body.password;
 
-  if (role === 'teacher') {
+  if (role === 'teacher' && password === '1234') {
     req.session.role = 'teacher';
   } else if (role === 'student') {
     req.session.role = 'student';
