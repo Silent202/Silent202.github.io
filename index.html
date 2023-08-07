@@ -37,10 +37,15 @@
   </header>
   
   <main>
+    <button id="infoButton">Information</button>
     <button id="testsButton">Tests</button>
     <button id="quizletButton">Quizlet Links</button>
     <button id="videosButton">Video Links</button>
-    <button id="infoButton">Information</button>
+
+    <section id="infoSection">
+      <h2>Information</h2>
+      <p>This section contains important information for your studies.</p>
+    </section>
     
     <section id="testsSection">
       <h2>Tests</h2>
@@ -68,24 +73,23 @@
         <li><a href="#">Video 3</a></li>
       </ul>
     </section>
-    
-    <section id="infoSection">
-      <h2>Information</h2>
-      <p>This section contains important information for your studies.</p>
-    </section>
   </main>
 
   <script>
+    const infoButton = document.getElementById('infoButton');
     const testsButton = document.getElementById('testsButton');
     const quizletButton = document.getElementById('quizletButton');
     const videosButton = document.getElementById('videosButton');
-    const infoButton = document.getElementById('infoButton');
 
+    const infoSection = document.getElementById('infoSection');
     const testsSection = document.getElementById('testsSection');
     const quizletSection = document.getElementById('quizletSection');
     const videosSection = document.getElementById('videosSection');
-    const infoSection = document.getElementById('infoSection');
 
+    infoButton.addEventListener('click', () => {
+      toggleSections(infoSection);
+    });
+    
     testsButton.addEventListener('click', () => {
       toggleSections(testsSection);
     });
@@ -98,15 +102,11 @@
       toggleSections(videosSection);
     });
 
-    infoButton.addEventListener('click', () => {
-      toggleSections(infoSection);
-    });
-
     function toggleSections(section) {
+      infoSection.style.display = 'none';
       testsSection.style.display = 'none';
       quizletSection.style.display = 'none';
       videosSection.style.display = 'none';
-      infoSection.style.display = 'none';
       
       section.style.display = 'block';
     }
