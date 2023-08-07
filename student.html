@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Student Page</title>
+</head>
+<body>
+  <h1>Student Page</h1>
+  <h2>Links added by Teacher:</h2>
+  <ul>
+    <% teacherLinks.forEach(function(link) { %>
+      <li><a href="<%= link %>"><%= link %></a></li>
+    <% }); %>
+  </ul>
+  <a href="/">Back to Home</a>
+</body>
+</html>
