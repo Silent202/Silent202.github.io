@@ -37,11 +37,16 @@
   </header>
   
   <main>
+    <button id="announceButton">Announcements</button>
     <button id="infoButton">Information</button>
     <button id="testsButton">Tests</button>
     <button id="quizletButton">Quizlet Links</button>
     <button id="videosButton">Video Links</button>
 
+    <section id="announceSection">
+      <h2>This Is The Announcement Section</h2>
+    </section>
+    
     <section id="infoSection">
       <h2>Information</h2>
       <p>This section contains important information for your studies.</p>
@@ -76,6 +81,7 @@
   </main>
 
   <script>
+    const announceButton = document.getElementById('announceButton');
     const infoButton = document.getElementById('infoButton');
     const testsButton = document.getElementById('testsButton');
     const quizletButton = document.getElementById('quizletButton');
@@ -86,6 +92,10 @@
     const quizletSection = document.getElementById('quizletSection');
     const videosSection = document.getElementById('videosSection');
 
+    announceButton.addEventListener('click', () => {
+      toggleSections(announceSection);
+    });
+    
     infoButton.addEventListener('click', () => {
       toggleSections(infoSection);
     });
