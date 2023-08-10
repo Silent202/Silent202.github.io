@@ -5,8 +5,9 @@ body, h1, h2, ul, li, p, form {
 }
 
 /* Basic styling */
-header {
-  background-color: #FF0000;
+.center-heading {
+  background-color: #e74c3c;
+  padding: 10px;
   text-align: center;
 }
 body {
