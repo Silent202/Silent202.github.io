@@ -5,6 +5,10 @@ body, h1, h2, ul, li, p, form {
 }
 
 /* Basic styling */
+header {
+  background-color: #FF0000;
+  text-align: center;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
