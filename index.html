@@ -1,134 +1,168 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles.css">
-  <title>Study Links</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    header {
-      background-color: #ff0000;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-    }
-    main {
-      padding: 20px;
-    }
-    button {
-      background-color: #007BFF;
-      color: #fff;
-      border: 10px;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-    }
-    section {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Study Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: 10px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        section {
+            display: none;
+        }
+		.bottom-right-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: red;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		.release {
+			color: black;
+		}
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Study Links</h1>
-  </header>
-  
-  <main>
-    <button id="announceButton">Announcements</button>
-    <button id="infoButton">Information</button>
-    <button id="testsButton">Tests</button>
-    <button id="quizletButton">Quizlet Links</button>
-    <button id="videosButton">Video Links</button>
+    <header>
+        <h1>Study Links</h1>
+		<footer class="release"> Website release v1.0.0 on 8/13/2023</footer>
+    </header>
+    <main>
+        <button id="infoButton">Information</button>
+        <button id="testsButton">Tests</button>
+        <button id="quizletButton">Quizlet Links</button>
+        <button id="videosButton">Video Links</button>
+		<footer><button id="updateButton" class="bottom-right-button">Update History</button></footer>
 
-    <section id="announceSection">
-      <h2>Announcements</h2>
-      <p><h2></h2>Recent changes have been made. 08/09/2023</h2></p>
-      <ol>
-        <li><p>Updated some colors</p></li>
-        <li><p>Fixed buggy buttons</p></li>
-        <li><p>Soon to be server version</p></li>
-        <li><p>Soon to be links</p></li>
-        <li><p>Soon to be login page if applicable</p></li>
-      </ol>
-    </section>
-    
-    <section id="infoSection">
-      <h2>Information</h2>
-      <p>This section contains important information for your studies.</p>
-    </section>
-    
-    <section id="testsSection">
-      <h2>Tests</h2>
-      <ul>
-        <li><a href="#">Test 1</a></li>
-        <li><a href="#">Test 2</a></li>
-        <li><a href="#">Test 3</a></li>
-      </ul>
-    </section>
-    
-    <section id="quizletSection">
-      <h2>Quizlet Links</h2>
-      <ul>
-        <li><a href="#">Quizlet 1</a></li>
-        <li><a href="#">Quizlet 2</a></li>
-        <li><a href="#">Quizlet 3</a></li>
-      </ul>
-    </section>
-    
-    <section id="videosSection">
-      <h2>Video Links</h2>
-      <ul>
-        <li><a href="#">Video 1</a></li>
-        <li><a href="#">Video 2</a></li>
-        <li><a href="#">Video 3</a></li>
-      </ul>
-    </section>
-  </main>
-  
-  <script>
-    const announceButton = document.getElementById('announceButton');
-    const infoButton = document.getElementById('infoButton');
-    const testsButton = document.getElementById('testsButton');
-    const quizletButton = document.getElementById('quizletButton');
-    const videosButton = document.getElementById('videosButton');
+        <section id="updateSection">
+            <h2>Recent Update History</h2>
+			<ol>
+				<ul>
+					<li>
+						<p>
+							<h1>All changes were made varying different days and times, updates will frequent every friday - sunday</h1>
+						</p>
+					</li>
+					<li>
+						<p>Changed button colors</p>
+					</li>
+					<li>
+						<p>Added this Update History button</p>
+					</li>
+					<li>
+						<p>Fixed some spelling and coding mistakes</p>
+					</li>
+					<li>
+						<p>Deleted the announcements button</p>
+					</li>
+					<li>
+						<p>Soon to be links</p>
+					</li>
+					<li>
+						<p>Soon to be FLCS background</p>
+					</li>
+				</ul>
+			</ol>
+        </section>
 
-    const announceSection = document.getElementById('announceSection');
-    const infoSection = document.getElementById('infoSection');
-    const testsSection = document.getElementById('testsSection');
-    const quizletSection = document.getElementById('quizletSection');
-    const videosSection = document.getElementById('videosSection');
+        <section id="infoSection">
+            <h2>Information</h2>
+            <p>This section contains important information for your studies.</p>
+        </section>
 
-    announceButton.addEventListener('click', () => {
-      toggleSections(announceSection);
-    });
-    
-    infoButton.addEventListener('click', () => {
-      toggleSections(infoSection);
-    });
-    
-    testsButton.addEventListener('click', () => {
-      toggleSections(testsSection);
-    });
+        <section id="testsSection">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Test 1</a></li>
+                <li><a href="#">Test 2</a></li>
+                <li><a href="#">Test 3</a></li>
+            </ul>
+        </section>
 
-    quizletButton.addEventListener('click', () => {
-      toggleSections(quizletSection);
-    });
+        <section id="quizletSection">
+            <h2>Quizlet Links</h2>
+            <ul>
+                <li><a href="#">Quizlet 1</a></li>
+                <li><a href="#">Quizlet 2</a></li>
+                <li><a href="#">Quizlet 3</a></li>
+            </ul>
+        </section>
 
-    videosButton.addEventListener('click', () => {
-      toggleSections(videosSection);
-    });
+        <section id="videosSection">
+            <h2>Video Links</h2>
+            <ul>
+                <li><a href="#">Video 1</a></li>
+                <li><a href="#">Video 2</a></li>
+                <li><a href="#">Video 3</a></li>
+            </ul>
+        </section>
+    </main>
 
-    function toggleSections(section) {
-      announceSection.style.display = 'none';
-      infoSection.style.display = 'none';
-      testsSection.style.display = 'none';
-      quizletSection.style.display = 'none';
-      videosSection.style.display = 'none';
-      
-      section.style.display = 'block';
-    }
-  </script>
+    <script>
+        const updateButton = document.getElementById('updateButton');
+        const infoButton = document.getElementById('infoButton');
+        const testsButton = document.getElementById('testsButton');
+        const quizletButton = document.getElementById('quizletButton');
+        const videosButton = document.getElementById('videosButton');
+
+		const updateSection = document.getElementById('updateSection');
+        const infoSection = document.getElementById('infoSection');
+        const testsSection = document.getElementById('testsSection');
+        const quizletSection = document.getElementById('quizletSection');
+        const videosSection = document.getElementById('videosSection');
+
+        updateButton.addEventListener('click', () => {
+            toggleSections(updateSection);
+        });
+
+        infoButton.addEventListener('click', () => {
+            toggleSections(infoSection);
+        });
+
+        testsButton.addEventListener('click', () => {
+            toggleSections(testsSection);
+        });
+
+        quizletButton.addEventListener('click', () => {
+            toggleSections(quizletSection);
+        });
+
+        videosButton.addEventListener('click', () => {
+            toggleSections(videosSection);
+        });
+
+        function toggleSections(section) {
+			updateSection.style.display = 'none';
+            infoSection.style.display = 'none';
+            testsSection.style.display = 'none';
+            quizletSection.style.display = 'none';
+            videosSection.style.display = 'none';
+
+            section.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
